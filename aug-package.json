@@ -26,9 +26,9 @@
           "libc": "libSystem"
         },
         "url": "https://github.com/GreenPandaStudios/aug-gpu/releases/download/v0.1.0/native-macos-arm64.tar.gz",
-        "sha256": "aa01f2e5d83a13922ffe003325a858632ae8b906a79ba1ca4e619977e39fcbab",
-        "maximumDownloadBytes": 11606,
-        "maximumUnpackedBytes": 66524,
+        "sha256": "3a5aac57ea4a48526131e1527b2558ba83539fad613f834396ef36d677cf5dd6",
+        "maximumDownloadBytes": 11723,
+        "maximumUnpackedBytes": 66727,
         "link": {
           "kind": "dynamic",
           "libraries": [
