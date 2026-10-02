@@ -1,0 +1,60 @@
+{
+  "format": 2,
+  "name": "@greenpandastudios/aug-gpu",
+  "version": "0.1.0",
+  "compiler": "0.22.0",
+  "source": "src",
+  "dependencies": {},
+  "native": {
+    "profile": "aug-native-abi-1",
+    "bindings": "native.abi.json",
+    "bindingsSha256": "d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c",
+    "upstream": {
+      "repository": "https://github.com/GreenPandaStudios/aug-gpu",
+      "version": "0.1.0",
+      "sourceRevision": "d055b6a39e98d2f8d871fc9f731ad4b1788f205131ed32b6f76cabbdd5b3b1bd"
+    },
+    "artifacts": [
+      {
+        "id": "macos-arm64",
+        "target": {
+          "triple": "aarch64-apple-darwin",
+          "os": "macos",
+          "arch": "arm64",
+          "minimumOS": "14.0",
+          "cpuBaseline": "armv8-a",
+          "libc": "libSystem"
+        },
+        "url": "https://github.com/GreenPandaStudios/aug-gpu/releases/download/v0.1.0/native-macos-arm64.tar.gz",
+        "sha256": "aa01f2e5d83a13922ffe003325a858632ae8b906a79ba1ca4e619977e39fcbab",
+        "maximumDownloadBytes": 11606,
+        "maximumUnpackedBytes": 66524,
+        "link": {
+          "kind": "dynamic",
+          "libraries": [
+            "lib/libaug_gpu.1.dylib"
+          ]
+        },
+        "runtime": {
+          "files": [
+            "lib/libaug_gpu.1.dylib"
+          ],
+          "closureManifest": "runtime-files.json",
+          "relocation": "loader-relative"
+        },
+        "components": [
+          {
+            "id": "https://github.com/GreenPandaStudios/aug-gpu",
+            "version": "0.1.0",
+            "compatibilityKey": "aug-gpu-runtime",
+            "linkage": "dynamic",
+            "required": true
+          }
+        ],
+        "fileManifest": "files.json",
+        "provenance": "provenance.json",
+        "notices": "THIRD_PARTY_NOTICES.md"
+      }
+    ]
+  }
+}

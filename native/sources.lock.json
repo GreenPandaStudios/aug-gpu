@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "target": "aarch64-apple-darwin",
+  "minimumOS": "14.0",
+  "upstream": {
+    "repository": "https://github.com/GreenPandaStudios/aug-gpu",
+    "version": "0.1.0",
+    "sourceRevision": "d055b6a39e98d2f8d871fc9f731ad4b1788f205131ed32b6f76cabbdd5b3b1bd"
+  },
+  "inputs": [],
+  "systemFrameworks": [
+    "Metal",
+    "Foundation"
+  ],
+  "kernelPrecision": "float32"
+}

@@ -1,0 +1,6 @@
+.aug-build/
+.aug-packages/
+.aug-install-*/
+node_modules/
+*.tar.gz
+aug.lock.json

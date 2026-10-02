@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "target": "aarch64-apple-darwin",
+  "operation": "Real Metal addition from two isolated August workers",
+  "transport": "reviewed local candidate; public repository download is a separate gate",
+  "compiler": "0.22.0",
+  "artifactSha256": "aa01f2e5d83a13922ffe003325a858632ae8b906a79ba1ca4e619977e39fcbab",
+  "sourceFiles": {
+    "native/src/metal.m": "d055b6a39e98d2f8d871fc9f731ad4b1788f205131ed32b6f76cabbdd5b3b1bd",
+    "native/tests/client.c": "027bae7c358a6fcd3c105ab339514870b600989c7fa1729eb09a81603752b90c",
+    "native.abi.json": "d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c",
+    "examples/add/compute.aug": "210c7a722d74cb752f1399ea254d2ae88fe21d70cf26f94cfd75885913fe1b43",
+    "examples/add/main.aug": "b35a69cb23c918dd07956e15874dff46ee0eb47f6f581057855bf046e9487008",
+    "native/qualify.mjs": "868f0eb13c62fca94a4a0a3d21ad1dabd4b2ab3370ada55bc68f76f83e88624d"
+  },
+  "toolingUnavailableDuringWorkerExample": true,
+  "outcomes": [
+    {
+      "optimization": "debug",
+      "stdout": "5\n7\n9\n11\n22\n",
+      "passed": true
+    },
+    {
+      "optimization": "release",
+      "stdout": "5\n7\n9\n11\n22\n",
+      "passed": true
+    }
+  ],
+  "sameFileTests": 2
+}

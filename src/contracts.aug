@@ -1,0 +1,4 @@
+// aug-spec: "contracts.aug.md" explains this file. Read it before changes; refresh with aug spec.
+GpuError(int code, string message) implements Error:
+    explain() returns string:
+        return message
