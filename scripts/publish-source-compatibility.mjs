@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync,existsSync,writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {spawnSync} from 'node:child_process';
-import {createHash} from 'node:crypto';
+import {verifyCompatibilityInputs} from './compatibility-inputs.mjs';
 const manifest=JSON.parse(readFileSync('aug-package.json')),repository=process.env.GITHUB_REPOSITORY,tag=process.env.AUG_RELEASE_TAG;
 assert.equal(repository,'GreenPandaStudios/'+manifest.name.split('/').at(-1));assert.equal(tag,'v'+manifest.version);
 const gh=args=>{const result=spawnSync('gh',args,{encoding:'utf8'});assert.equal(result.status,0,result.stderr);return result.stdout;};
@@ -16,23 +16,7 @@ const originalFile=path=>Buffer.from(JSON.parse(gh(['api',`repos/${repository}/c
 const original=JSON.parse(originalFile('aug-package.json'));
 assert.deepEqual({...manifest,version:original.version,compiler:original.compiler},original,'A compatibility release may change only package and compiler versions');
 const tree=JSON.parse(gh(['api',`repos/${repository}/git/trees/${originalTag}?recursive=1`]));
-assert.equal(tree.truncated,false,'Original binding source inventory is incomplete');
-const previousBindings=tree.tree.filter(file=>file.type==='blob'&&file.path.startsWith(original.source+'/')&&file.path.endsWith('.aug')).map(file=>file.path).sort();
-const currentBindings=[];
-function bindingFiles(directory){for(const entry of readdirSync(directory,{withFileTypes:true})){
- assert.ok(!entry.isSymbolicLink(),'Compatibility binding sources must not contain links');
- const path=join(directory,entry.name);if(entry.isDirectory())bindingFiles(path);else if(entry.isFile()&&path.endsWith('.aug'))currentBindings.push(path);
-}}bindingFiles(manifest.source);
-assert.deepEqual(currentBindings.sort(),previousBindings,'A compatibility release cannot add or remove August bindings');
-for(const file of currentBindings)assert.equal(readFileSync(file).equals(originalFile(file)),true,'August binding changed: '+file);
-
-const files=['native.abi.json','native/sources.lock.json'];
-function collect(directory){for(const entry of readdirSync(directory,{withFileTypes:true})){
- if(entry.name==='licenses'||entry.name.startsWith('.')||entry.name==='target')continue;
- const path=join(directory,entry.name);if(entry.isDirectory())collect(path);else if(/\.(?:c|cc|cpp|rs|h|hpp)$/.test(path))files.push(path);
-}}collect('native');
-const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
-for(const file of files)assert.equal(digest(readFileSync(file)),digest(originalFile(file)),'Native input changed: '+file);
+verifyCompatibilityInputs(process.cwd(),manifest,tree,originalFile);
 const previous=JSON.parse(gh(['api',`repos/${repository}/releases/tags/${originalTag}`]));assert.equal(previous.draft,false);
 for(const artifact of manifest.native.artifacts){const filename=new URL(artifact.url).pathname.split('/').at(-1);assert.ok(previous.assets.some(a=>a.name===filename&&a.size===artifact.maximumDownloadBytes),'The inherited artifact must be published');}
 const notes=`This source package targets August ${manifest.compiler}. Its native ABI, adapter source and all artifact pins are unchanged from ${originalTag}. Consumers download those existing verified archives. The matching compiler preview is prepared separately; this is a source compatibility release, not a new native binary build.\n`;
