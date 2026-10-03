@@ -67,6 +67,7 @@ jobs:
           appendFileSync(process.env.GITHUB_OUTPUT,'run='+plan.runId+'\n');
           AUG_RUN
       - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        if: steps.profile.outputs.reused != 'true'
         with:
           run-id: ${{ steps.candidate.outputs.run }}
           github-token: ${{ github.token }}
