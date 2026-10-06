@@ -2,19 +2,19 @@
 
 # `contracts.aug`
 
-<!-- August spec revision: schema=1 compiler=1.0.0 source-sha256=fe80746cbee9fcbfb60bdcca75210b57f6a0c53aa366f8dc6ac6448158f04f12 -->
+<!-- August spec revision: schema=1 compiler=1.0.0 source-sha256=7db9a52fd594da163175cead6bb19285e2a9233e565f0193df6cc7387dd4d356 -->
 
 [Interactions and sequences](contracts.aug.diagrams.md)
 
 <a id="symbol-GpuError"></a>
-## `GpuError` · class · [source](contracts.aug#L2)
+## `GpuError` · class · [source](contracts.aug#L3)
 
 It implements `Error`. It takes `code` as an integer, kept read-only and `message` as a string, kept read-only.
 
 <a id="symbol-GpuError.explain"></a>
-### `GpuError.explain` · [source](contracts.aug#L3)
+### `GpuError.explain` · [source](contracts.aug#L4)
 
-It returns `message`. [source](contracts.aug#L4)
+It returns `message`. [source](contracts.aug#L5)
 
 <details>
 <summary>Checked interface</summary>

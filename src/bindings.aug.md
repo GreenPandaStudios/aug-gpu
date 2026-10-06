@@ -2,12 +2,16 @@
 
 # `bindings.aug`
 
+<!-- August spec revision: schema=1 compiler=1.0.0 source-sha256=6c62ac8b253f036a7b30a20230c3795e09be9a1721c379cda54314aac4ddf680 -->
+
+[Interactions and sequences](bindings.aug.diagrams.md)
+
 <a id="symbol-Device"></a>
 ## `Device` · native resource · [source](bindings.aug#L2)
 
-Native implementation: `@greenpandastudios/aug-gpu@0.1.0`, `0.1.0`. Supported targets: macos arm64 14.0+. Binding contract: [`native.abi.json`](../.aug-spec/packages/%40greenpandastudios/aug-gpu/0.1.0/native.abi.json) (SHA-256 `d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c`). An owned value releases its opaque handle through `aug_gpu_device_release_v1` when its scope ends, including error and return paths.
+Native implementation: `@greenpandastudios/aug-gpu@0.2.0`, `0.1.0`. Supported targets: macos arm64 14.0+. Binding contract: [`native.abi.json`](../.aug-spec/packages/%40greenpandastudios/aug-gpu/0.2.0/native.abi.json) (SHA-256 `d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c`). An owned value releases its opaque handle through `aug_gpu_device_release_v1` when its scope ends, including error and return paths.
 
 <a id="symbol-Buffer"></a>
 ## `Buffer` · native resource · [source](bindings.aug#L3)
 
-Native implementation: `@greenpandastudios/aug-gpu@0.1.0`, `0.1.0`. Supported targets: macos arm64 14.0+. Binding contract: [`native.abi.json`](../.aug-spec/packages/%40greenpandastudios/aug-gpu/0.1.0/native.abi.json) (SHA-256 `d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c`). An owned value releases its opaque handle through `aug_gpu_buffer_release_v1` when its scope ends, including error and return paths.
+Native implementation: `@greenpandastudios/aug-gpu@0.2.0`, `0.1.0`. Supported targets: macos arm64 14.0+. Binding contract: [`native.abi.json`](../.aug-spec/packages/%40greenpandastudios/aug-gpu/0.2.0/native.abi.json) (SHA-256 `d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c`). An owned value releases its opaque handle through `aug_gpu_buffer_release_v1` when its scope ends, including error and return paths.

@@ -1,3 +1,4 @@
+// aug-spec: "main.aug.md" explains this file. Read it before changes; refresh with aug spec.
 import calculate from compute
 import GpuError from gpu
 
@@ -12,3 +13,5 @@ try:
             print(value)
 catch GpuError error:
     print(value=error.explain())
+catch ConcurrencyError error:
+    print(value="Worker capacity is exhausted")

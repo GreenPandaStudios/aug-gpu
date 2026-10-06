@@ -4,14 +4,14 @@ Run float32 vector operations on a Metal GPU through ordinary August imports. Th
 
 This first release supports Apple Silicon with macOS 14 or later and an available Metal GPU. Consumers download a prebuilt adapter and need no Xcode or native compiler. Authoring the adapter requires the macOS SDK. NVIDIA CUDA support needs a separate artifact and real hardware qualification; it is not included in this release.
 
-Requires August 0.22.0, the preview containing isolated workers. The compiler release is prepared separately; use its reviewed candidate until npm publication.
+Version 0.2.0 requires August 1.0.0. The reviewed native archive passes real Metal worker and cleanup checks with the 1.0.0 compiler candidate; publication is pending. With the published August 0.23.0 compiler, use package v0.1.1.
 
 ## Use the package
 
 Add the repository through the ordinary package manager:
 
 ```sh
-aug add https://github.com/GreenPandaStudios/aug-gpu#v0.1.0 --as gpu
+aug add https://github.com/GreenPandaStudios/aug-gpu#v0.2.0 --as gpu
 aug run
 ```
 

@@ -1,0 +1,24 @@
+{
+  "format": 1,
+  "files": [
+    ".aug-spec/diagrams/index.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/api.aug",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/api.aug.diagrams.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/api.aug.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/bindings.aug",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/bindings.aug.diagrams.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/bindings.aug.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/contracts.aug",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/contracts.aug.diagrams.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/contracts.aug.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/native.abi.json",
+    "compute.aug.diagrams.md",
+    "compute.aug.md",
+    "main.aug.diagrams.md",
+    "main.aug.md"
+  ],
+  "nativeDescriptors": {
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/native.abi.json": "d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c"
+  },
+  "digest": "0a023030cc49c73dc719c8f1440b0319219a4e11d98201d489afc320ac4f8a1c"
+}
