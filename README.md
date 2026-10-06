@@ -4,7 +4,7 @@ Run float32 vector operations on a Metal GPU through ordinary August imports. Th
 
 This first release supports Apple Silicon with macOS 14 or later and an available Metal GPU. Consumers download a prebuilt adapter and need no Xcode or native compiler. Authoring the adapter requires the macOS SDK. NVIDIA CUDA support needs a separate artifact and real hardware qualification; it is not included in this release.
 
-Version 0.2.0 requires August 1.0.0. Compiler and hardware qualification are pending; this candidate is unpublished. With the published August 0.23.0 compiler, use package v0.1.1.
+Version 0.2.0 requires August 1.0.0. The reviewed native archive passes real Metal worker and cleanup checks with the 1.0.0 compiler candidate; publication is pending. With the published August 0.23.0 compiler, use package v0.1.1.
 
 ## Use the package
 

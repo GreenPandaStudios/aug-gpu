@@ -1,3 +1,4 @@
+// aug-spec: "compute.aug.md" explains this file. Read it before changes; refresh with aug spec.
 import Device and Buffer and openDevice and upload and add and download from gpu
 
 /** Add two lists on a GPU and return copied values. GPU resources stay local. */
