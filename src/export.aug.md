@@ -2,6 +2,10 @@
 
 # `export.aug`
 
+<!-- August spec revision: schema=1 compiler=1.0.0 source-sha256=86c2f563b96adb1c92e7297497985ab586796da273da4384136ebb2e44598e77 -->
+
+[Interactions and sequences](export.aug.diagrams.md)
+
 ## Exports
 
 Export the declaration `Device` from [`bindings.aug`](bindings.aug.md#symbol-Device). Export the declaration `Buffer` from [`bindings.aug`](bindings.aug.md#symbol-Buffer). Export the declaration `GpuError` from [`contracts.aug`](contracts.aug.md#symbol-GpuError). Export the declaration `openDevice` from [`api.aug`](api.aug.md#symbol-openDevice).

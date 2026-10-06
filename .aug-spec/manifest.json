@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "files": [
+    ".aug-spec/diagrams/folders/src/index.md",
+    ".aug-spec/diagrams/index.md",
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/native.abi.json",
+    "src/api.aug.diagrams.md",
+    "src/api.aug.md",
+    "src/bindings.aug.diagrams.md",
+    "src/bindings.aug.md",
+    "src/contracts.aug.diagrams.md",
+    "src/contracts.aug.md",
+    "src/export.aug.diagrams.md",
+    "src/export.aug.md"
+  ],
+  "nativeDescriptors": {
+    ".aug-spec/packages/@greenpandastudios/aug-gpu/0.2.0/native.abi.json": "d95e237d8be07df8fd20132ca0f5a45a125fd65b7ba93669e69c0a38db63d60c"
+  },
+  "digest": "85bdb8267e95ad972049c34c2261246293ffc3a7872034ef08cfcd7eeac270b4"
+}
